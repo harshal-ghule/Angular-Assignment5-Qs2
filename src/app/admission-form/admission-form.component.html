@@ -1,0 +1,54 @@
+<div class="container myform-align">
+    
+    <img src="/assets/logo.png"  style="height:100px ; width:100px;"align="left"/>
+    
+    <div class="container" style="text-align: center; padding-top:2em">
+    <h1>Admission Form</h1> 
+    </div>
+      <br>
+    <form>
+        <div class="form-group">
+        <label for="Studname"> Name </label>
+        <input type="text" [(ngModel)]="Studname" name="Studname" class="form-control"  placeholder="Enter your name">
+        </div >
+
+        <div class="form-group" style="width:40%;" float="left">
+        <label for="MobileNo"> Mobile Number </label>
+        <input type="tel" ng-pattern="phoneNumbr" required  [(ngModel)]="MobileNo" name="MobileNo" class="form-control"  placeholder="Enter your mobile number" >
+        </div>
+      
+        <div class="form-group"  style="width:40%;" float="left">
+            <label for="Gender">Gender :</label>
+            <select [(ngModel)]="Gender" name="Gender" class="form-control">
+              <option>Male</option>
+              <option>Female</option>
+           </select>
+        </div>
+      
+            <br>
+
+        <div class="form-group">
+        <label for="CollageName">Collage Name</label>
+        <input type="text" [(ngModel)]="CollageName" name="CollageName" class="form-control"  placeholder="Enter your collage name ">
+        </div>
+       
+        <div class="form-group">
+            <label for="Email"> Email </label>
+            <input type="email" [(ngModel)]="Email" name="Email" class="form-control"  placeholder="Enter your Email">
+            </div >
+
+        <div class="form-group">
+                <label for="BatchName"> Batch Name </label>
+                <input type="text" [(ngModel)]="BatchName" name="BatchName" class="form-control"  placeholder="Enter your Batch">
+        </div >
+
+        <div class="form-group">
+            <label for="Address"> Address </label>
+            <textarea name="Address" [(ngModel)]="Address" cols="20" rows="5" placeholder="Enter your Address" class="form-control">
+             </textarea>
+        </div>
+
+        <button type="submit" class="btn btn-default" (click)="sendData()" >Submit</button>
+        </form>
+    
+</div>
